@@ -1,0 +1,13 @@
+[Unit]
+Description=Tomcat 9 Service
+After=network.target
+
+[Service]
+Type=forking
+User=root
+ExecStart=/home/ubuntu/Tomcat-aws-3Tier/apache-tomcat-9.0.118/bin/startup.sh
+ExecStop=/home/ubuntu/Tomcat-aws-3Tier/apache-tomcat-9.0.118/bin/shutdown.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
